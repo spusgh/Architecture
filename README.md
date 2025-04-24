@@ -1,9 +1,10 @@
+
 # Architecture
 
+<details><summary>Software Architecture</summary>
 
 ## Software Architecture
 Software architecture is the high-level structure of a software system, defining how components interact, how data flows, and how the system is designed for scalability, security, and maintainability.
-
 
 #### Software Architecture Classifications
 Software architecture can be classified into different categories based on structure, design principles, and system interactions. Here are some common classifications:
@@ -18,7 +19,6 @@ Software architecture can be classified into different categories based on struc
 - Microkernel Architecture – A core system with plug-in modules for extensibility.
 - Space-Based Architecture – Designed for scalability by distributing processing across multiple nodes.
 
-
 #### Software Architecture Patterns
 There are several types of software architecture patterns, each suited for different use cases:
 - Layered Architecture – Organizes software into layers (e.g., presentation, business logic, data access) to improve modularity and separation of concerns.
@@ -30,6 +30,8 @@ There are several types of software architecture patterns, each suited for diffe
 - Client-Server Architecture – Separates the client (user interface) from the server (data processing), commonly used in web applications.
 - Peer-to-Peer Architecture – Allows nodes to communicate directly without a central server, often used in decentralized systems.
 
+</details>
+<details><summary>Data Architecture</summary>
 
 ## Data Architecture
 Data architecture can be classified under SaaS (Software as a Service), BI (Business Intelligence), or Database depending on its purpose and implementation:
@@ -50,4 +52,4 @@ Data architecture classifications define how data is structured, stored, and man
 - Data Warehouse Architecture – Organizes structured data for reporting and analytics.
 - Event-Driven Architecture – Processes data in real-time based on triggered events.
 
-
+</details>
