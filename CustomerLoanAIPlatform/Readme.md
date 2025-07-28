@@ -56,7 +56,7 @@ Client Interfaces → API Gateway → AI Core → Risk & Personalization → Com
 
 ### 🔧 API Modules & Microservices
 
-<li><a href="https://github.com/spusgh/Architecture/blob/main/CustomerLoanAIPlatform/AILoanPlatform%E2%80%93APIEcosystem.mermaid">API Ecosystem Diagram (Mermaid File)</a></li>
+<li><a href="https://github.com/spusgh/Architecture/blob/main/CustomerLoanAIPlatform/AILoanPlatform%E2%80%93APIEcosystem.mermaid">API Ecosystem Diagram (Mermaid File)</a></li></br>
 
 | API Module	| Description |
 | :--- | --- |
