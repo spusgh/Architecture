@@ -1,0 +1,13 @@
+flowchart TD
+    InternalAPI[Internal APIs]
+    ExternalAPI[External APIs]
+    Gateway[API Gateway]
+    CreditProvider[Credit Score Provider]
+    KYC[KYC Service]
+    CRM[CRM Integration]
+
+    InternalAPI --> Gateway
+    ExternalAPI --> Gateway
+    Gateway --> CreditProvider
+    Gateway --> KYC
+    Gateway --> CRM
