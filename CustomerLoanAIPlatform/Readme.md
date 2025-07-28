@@ -13,6 +13,9 @@ A scalable platform powered by AI for intelligent loan processing, risk assessme
 ## 🧠 System Overview
 
 ### High Level System Diagram
+<li><a href="https://github.com/spusgh/Architecture/blob/main/CustomerLoanAIPlatform/AILoanPlatform%E2%80%93SystemArchitectureDiagram.png">System Architecture Diagram</a></li>
+<li><a href="https://github.com/spusgh/Architecture/blob/main/CustomerLoanAIPlatform/AILoanPlatform%E2%80%93SystemArchitectureDiagram.mmd">System Architecture Diagram (Mermaid File)</a></li>
+
 Client Interfaces → API Gateway → AI Core → Risk & Personalization → Compliance & Notifications
 
 | Layer	| Components | 
@@ -52,6 +55,9 @@ Client Interfaces → API Gateway → AI Core → Risk & Personalization → Com
 ## Functional Components
 
 ### 🔧 API Modules & Microservices
+
+<li><a href="https://github.com/spusgh/Architecture/blob/main/CustomerLoanAIPlatform/AILoanPlatform%E2%80%93APIEcosystem.mermaid">API Ecosystem Diagram (Mermaid File)</a></li>
+
 | API Module	| Description |
 | :--- | --- |
 | Loan Intake API	| Collects applicant data, documents, and consent |
