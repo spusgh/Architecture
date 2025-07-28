@@ -48,14 +48,14 @@ Data architecture classifications define how data is structured, stored, and man
 - Event-Driven Architecture – Processes data in real-time based on triggered events.
 
 
-# Solution Architecture
+## Solution Architecture
 
 <li>Solution architecture is the design and structure of a specific solution within a broader system, focusing on how components work together to meet business requirements.</li>
 <li>It includes defining the technology stack, integration points, data flow, and user interactions.</li>
 <li>Solution architecture is often used to bridge the gap between business needs and technical implementation, ensuring that the solution aligns with organizational goals.</li>
 <li>It involves creating detailed diagrams, specifications, and documentation to guide development and implementation.</li>
 
-## Solution Architecture Classifications
+### Solution Architecture Classifications
 Solution architecture can be classified into different categories based on the scope, complexity, and technology stack. Here are some common classifications:
 - Enterprise Architecture – A comprehensive framework that aligns IT strategy with business goals, covering all aspects of an organization’s technology landscape.
 - Application Architecture – Focuses on the design and structure of specific applications, including their components, interactions, and data flow.
@@ -64,7 +64,7 @@ Solution architecture can be classified into different categories based on the s
 - Data Architecture – Focuses on how data is structured, stored, and accessed within a solution, including databases, data lakes, and data warehouses.
 - Security Architecture – Ensures that solutions are designed with security in mind, addressing vulnerabilities, access controls, and compliance requirements.
 
-## Solution Architecture Patterns
+### Solution Architecture Patterns
 Solution architecture patterns provide reusable solutions to common design problems. Here are some widely used patterns:
 - Microservices Pattern – Breaks down applications into small, independent services that communicate via APIs, enhancing scalability and flexibility.
 - Event-Driven Pattern – Uses events to trigger actions across different components, making it ideal for real-time processing and decoupling services.
@@ -76,7 +76,7 @@ Solution architecture patterns provide reusable solutions to common design probl
 - Circuit Breaker Pattern – Prevents cascading failures in distributed systems by stopping requests to failing services
 - Saga Pattern – Manages long-running transactions and complex workflows in distributed systems, ensuring data consistency.
 
-## Solution Architecture POC
+#### Solution Architecture POC
 <li><a href="https://github.com/spusgh/Architecture/tree/main/CustomerLoanAIPlatform">Customer Loan AI Platform Architecture Solution</a></li>
 
 
