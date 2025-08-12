@@ -1,0 +1,36 @@
+graph TD
+  Admin[Admin]
+  Compliance[Compliance Officer]
+  LoanOfficer[Loan Officer]
+  RiskAnalyst[Risk Analyst]
+  ServicingTeam[Servicing Team]
+  CustomerPortal[Customer Portal]
+
+  Customers[(Customers)]
+  Applications[(Applications)]
+  Loans[(Loans)]
+  Payments[(Payments)]
+  RiskAssessments[(RiskAssessments)]
+  AuditLog[(AuditLog)]
+
+  Admin --> Customers
+  Admin --> Applications
+  Admin --> Loans
+  Admin --> Payments
+  Admin --> RiskAssessments
+  Admin --> AuditLog
+
+  Compliance --> AuditLog
+  Compliance --> RiskAssessments
+
+  LoanOfficer --> Applications
+  LoanOfficer --> Customers
+  LoanOfficer --> Loans
+
+  RiskAnalyst --> RiskAssessments
+
+  ServicingTeam --> Payments
+  ServicingTeam --> Loans
+
+  CustomerPortal --> Applications
+  CustomerPortal --> Payments

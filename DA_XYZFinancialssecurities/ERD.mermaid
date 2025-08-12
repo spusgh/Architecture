@@ -1,0 +1,44 @@
+erDiagram
+    Customers ||--o{ Applications : applies
+    Applications ||--|{ Loans : results_in
+    Loans ||--o{ Payments : has
+    Loans ||--o{ RiskAssessments : evaluated_by
+
+    Customers {
+        int customer_id
+        string name
+        string email
+        string phone
+        string address
+    }
+
+    Applications {
+        int application_id
+        int customer_id
+        date application_date
+        string status
+    }
+
+    Loans {
+        int loan_id
+        int application_id
+        float amount
+        float interest_rate
+        date start_date
+        date end_date
+    }
+
+    Payments {
+        int payment_id
+        int loan_id
+        date payment_date
+        float amount
+    }
+
+    RiskAssessments {
+        int assessment_id
+        int loan_id
+        string risk_level
+        string assessor
+        date assessment_date
+    }

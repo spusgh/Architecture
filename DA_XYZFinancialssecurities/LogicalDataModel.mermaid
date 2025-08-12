@@ -1,0 +1,38 @@
+%% Logical Data Model
+classDiagram
+    class Customers {
+        +CustomerID: INT PK
+        +Name: VARCHAR
+        +DateOfBirth: DATE
+        +Address: VARCHAR
+    }
+    class Applications {
+        +ApplicationID: INT PK
+        +CustomerID: INT FK
+        +ApplicationDate: DATE
+        +Status: VARCHAR
+    }
+    class Loans {
+        +LoanID: INT PK
+        +ApplicationID: INT FK
+        +Amount: DECIMAL
+        +InterestRate: FLOAT
+        +Term: INT
+    }
+    class Payments {
+        +PaymentID: INT PK
+        +LoanID: INT FK
+        +PaymentDate: DATE
+        +Amount: DECIMAL
+    }
+    class RiskAssessments {
+        +AssessmentID: INT PK
+        +ApplicationID: INT FK
+        +RiskScore: INT
+        +AssessmentDate: DATE
+    }
+
+    Customers --> Applications
+    Applications --> Loans
+    Loans --> Payments
+    Applications --> RiskAssessments

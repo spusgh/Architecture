@@ -1,0 +1,40 @@
+flowchart TD
+  subgraph Ownership
+    DataOwner1[Data Owner: Compliance Team]
+    DataOwner2[Data Owner: Risk Team]
+  end
+
+  subgraph Stewardship
+    Steward1[Steward: Customer Data Steward]
+    Steward2[Steward: Risk Data Steward]
+    Steward3[Steward: Loan Data Steward]
+  end
+
+  subgraph SensitiveFields
+    SSN[Field: SSN]
+    CreditScore[Field: CreditScore]
+    Address[Field: Address]
+    Income[Field: Income]
+  end
+
+  subgraph ValidationRules
+    Rule1[Rule: SSN Format Check]
+    Rule2[Rule: CreditScore Range (300–850)]
+    Rule3[Rule: Address Completeness]
+    Rule4[Rule: Income > 0]
+  end
+
+  DataOwner1 --> Steward1
+  DataOwner2 --> Steward2
+  DataOwner2 --> Steward3
+
+  Steward1 --> SSN
+  Steward1 --> Address
+  Steward1 --> Rule1
+  Steward1 --> Rule3
+
+  Steward2 --> CreditScore
+  Steward2 --> Rule2
+
+  Steward3 --> Income
+  Steward3 --> Rule4

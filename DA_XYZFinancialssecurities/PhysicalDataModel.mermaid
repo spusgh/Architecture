@@ -1,0 +1,42 @@
+%% Physical Data Model
+classDiagram
+    class Customers {
+        +CustomerID: INT PRIMARY KEY AUTO_INCREMENT
+        +Name: VARCHAR(100)
+        +DateOfBirth: DATE
+        +Address: VARCHAR(255)
+    }
+    class Applications {
+        +ApplicationID: INT PRIMARY KEY AUTO_INCREMENT
+        +CustomerID: INT NOT NULL
+        +ApplicationDate: DATE
+        +Status: VARCHAR(50)
+        +FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+    }
+    class Loans {
+        +LoanID: INT PRIMARY KEY AUTO_INCREMENT
+        +ApplicationID: INT NOT NULL
+        +Amount: DECIMAL(10,2)
+        +InterestRate: FLOAT
+        +Term: INT
+        +FOREIGN KEY (ApplicationID) REFERENCES Applications(ApplicationID)
+    }
+    class Payments {
+        +PaymentID: INT PRIMARY KEY AUTO_INCREMENT
+        +LoanID: INT NOT NULL
+        +PaymentDate: DATE
+        +Amount: DECIMAL(10,2)
+        +FOREIGN KEY (LoanID) REFERENCES Loans(LoanID)
+    }
+    class RiskAssessments {
+        +AssessmentID: INT PRIMARY KEY AUTO_INCREMENT
+        +ApplicationID: INT NOT NULL
+        +RiskScore: INT
+        +AssessmentDate: DATE
+        +FOREIGN KEY (ApplicationID) REFERENCES Applications(ApplicationID)
+    }
+
+    Customers --> Applications
+    Applications --> Loans
+    Loans --> Payments
+    Applications --> RiskAssessments

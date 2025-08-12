@@ -1,0 +1,24 @@
+flowchart TD
+  subgraph Loan Origination
+    AppForm[Process: Application Submission]
+    AppReview[Process: Application Review]
+    Approval[Process: Loan Approval]
+  end
+
+  subgraph Risk Assessment
+    CreditPull[Process: Credit Score Retrieval]
+    RiskScore[Process: Risk Scoring]
+  end
+
+  subgraph Servicing
+    PaymentProc[Process: Payment Processing]
+    AccountMgmt[Process: Account Management]
+  end
+
+  Customer --> AppForm
+  AppForm --> AppReview
+  AppReview --> Approval
+  Approval --> CreditPull
+  CreditPull --> RiskScore
+  Approval --> PaymentProc
+  PaymentProc --> AccountMgmt

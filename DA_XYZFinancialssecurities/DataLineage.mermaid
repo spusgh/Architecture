@@ -1,0 +1,23 @@
+﻿flowchart LR
+  subgraph Source
+    Applications[Applications Table]
+  end
+
+  subgraph Transformation
+    AppToLoan[Transform: Map Application → Loan]
+    LoanToPayment[Transform: Map Loan → Payment]
+  end
+
+  subgraph Destination
+    Loans[Loans Table]
+    Payments[Payments Table]
+  end
+
+  Applications --> AppToLoan
+  AppToLoan --> Loans
+  Loans --> LoanToPayment
+  LoanToPayment --> Payments
+
+  %% Highlight lineage of CustomerID
+  Applications -->|CustomerID| Loans
+  Loans -->|CustomerID| Payments

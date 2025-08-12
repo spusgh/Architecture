@@ -1,0 +1,59 @@
+erDiagram
+    Customers ||--o{ Applications : has
+    Products ||--o{ Applications : includes
+    Properties ||--o{ Loans : secured_by
+    Dates ||--o{ Applications : applied_on
+    Dates ||--o{ Loans : issued_on
+    Dates ||--o{ Payments : paid_on
+
+    Applications ||--|{ Loans : results_in
+    Loans ||--|{ Payments : generates
+
+    Customers {
+        int customer_id
+        string name
+        string segment
+    }
+
+    Products {
+        int product_id
+        string product_name
+        string category
+    }
+
+    Properties {
+        int property_id
+        string address
+        float value
+    }
+
+    Dates {
+        date date_id
+        string day_of_week
+        string month
+        int year
+    }
+
+    Applications {
+        int application_id
+        int customer_id
+        int product_id
+        date date_id
+        string status
+    }
+
+    Loans {
+        int loan_id
+        int application_id
+        int property_id
+        date date_id
+        float amount
+        float interest_rate
+    }
+
+    Payments {
+        int payment_id
+        int loan_id
+        date date_id
+        float amount
+    }

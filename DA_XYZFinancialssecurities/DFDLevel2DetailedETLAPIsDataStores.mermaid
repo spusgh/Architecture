@@ -1,0 +1,79 @@
+flowchart TD
+  %% External Entities
+  Customer[External Entity: Customer]
+  CreditBureau[External Entity: Credit Bureau]
+  TaxAuthority[External Entity: Tax Authority]
+  InsuranceProvider[External Entity: Insurance Provider]
+
+  %% Application & Validation
+  AppForm[Process: Submit Application]
+  AppAPI[API: Application API]
+  Validator[Process: Data Validation]
+  AppErrorQueue[(Error Queue: Invalid Applications)]
+  AppDB[(Data Store: Applications Table)]
+
+  %% Real-Time Streaming
+  KafkaApp[Stream: Kafka - App Events]
+  KafkaRisk[Stream: Kafka - Risk Events]
+  KafkaLoan[Stream: Kafka - Loan Events]
+
+  %% Risk Assessment
+  CreditAPI[API: Credit Score API]
+  RiskEngine[Process: Risk Scoring]
+  RiskValidator[Process: Risk Validation]
+  RiskErrorQueue[(Error Queue: Risk Errors)]
+  RiskDB[(Data Store: RiskAssessments Table)]
+
+  %% Loan Processing
+  LoanApproval[Process: Loan Approval]
+  LoanValidator[Process: Loan Validation]
+  LoanErrorQueue[(Error Queue: Loan Errors)]
+  LoanDB[(Data Store: Loans Table)]
+
+  %% Servicing
+  PaymentGateway[Process: Payment Collection]
+  EscrowMgmt[Process: Escrow Management]
+  ServicingDB[(Data Store: Payments & Escrow Tables)]
+
+  %% ETL & Analytics
+  ETLJob[Process: Nightly ETL Job]
+  DataWarehouse[(Data Store: Data Warehouse)]
+  BIReports[Process: BI Dashboards]
+  AlertEngine[Process: Alerting & Monitoring]
+
+  %% Data Flow Connections
+  Customer --> AppForm
+  AppForm --> AppAPI
+  AppAPI --> Validator
+  Validator -->|Valid| AppDB
+  Validator -->|Invalid| AppErrorQueue
+  AppDB --> KafkaApp
+
+  AppDB --> LoanApproval
+  LoanApproval --> LoanValidator
+  LoanValidator -->|Valid| LoanDB
+  LoanValidator -->|Invalid| LoanErrorQueue
+  LoanDB --> KafkaLoan
+
+  LoanApproval --> CreditAPI
+  CreditAPI --> CreditBureau
+  CreditAPI --> RiskEngine
+  RiskEngine --> RiskValidator
+  RiskValidator -->|Valid| RiskDB
+  RiskValidator -->|Invalid| RiskErrorQueue
+  RiskDB --> KafkaRisk
+
+  LoanDB --> PaymentGateway
+  PaymentGateway --> ServicingDB
+
+  ServicingDB --> EscrowMgmt
+  EscrowMgmt --> TaxAuthority
+  EscrowMgmt --> InsuranceProvider
+
+  AppDB --> ETLJob
+  LoanDB --> ETLJob
+  RiskDB --> ETLJob
+  ServicingDB --> ETLJob
+  ETLJob --> DataWarehouse
+  DataWarehouse --> BIReports
+  DataWarehouse --> AlertEngine

@@ -1,0 +1,37 @@
+flowchart TD
+  subgraph Extract
+    CRM[CRM System]
+    WebForms[Web Forms]
+    PaymentGateway[Payment Gateway]
+    RiskEngine[Risk Assessment Engine]
+  end
+
+  subgraph Transform
+    Cleanse[Data Cleansing]
+    Normalize[Normalization]
+    Enrich[Data Enrichment]
+    Validate[Validation Rules]
+  end
+
+  subgraph Load
+    Customers[(Customers Table)]
+    Applications[(Applications Table)]
+    Loans[(Loans Table)]
+    Payments[(Payments Table)]
+    RiskAssessments[(RiskAssessments Table)]
+  end
+
+  CRM --> Cleanse
+  WebForms --> Cleanse
+  PaymentGateway --> Cleanse
+  RiskEngine --> Cleanse
+
+  Cleanse --> Normalize
+  Normalize --> Enrich
+  Enrich --> Validate
+
+  Validate --> Customers
+  Validate --> Applications
+  Validate --> Loans
+  Validate --> Payments
+  Validate --> RiskAssessments

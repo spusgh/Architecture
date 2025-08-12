@@ -1,0 +1,17 @@
+flowchart TD
+  Customer[External Entity: Customer]
+  Portal[System: Customer Portal]
+  CRM[System: CRM]
+  LoanSystem[System: Loan Origination]
+  RiskEngine[System: Risk Assessment]
+  Servicing[System: Loan Servicing]
+  DataWarehouse[Data Store: Data Warehouse]
+
+  Customer --> Portal
+  Portal --> CRM
+  CRM --> LoanSystem
+  LoanSystem --> RiskEngine
+  LoanSystem --> Servicing
+  Servicing --> DataWarehouse
+  RiskEngine --> DataWarehouse
+  CRM --> DataWarehouse

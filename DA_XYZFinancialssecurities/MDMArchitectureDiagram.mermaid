@@ -1,0 +1,35 @@
+flowchart TD
+  subgraph Source Systems
+    CRM[CRM System]
+    ERP[ERP System]
+    RealEstate[Real Estate Platform]
+    Trading[Trading System]
+  end
+
+  subgraph MDM Hub
+    MatchMerge[Matching & Merging]
+    GoldenRecord[Golden Record Repository]
+    Governance[Data Governance Rules]
+    Metadata[Metadata Management]
+  end
+
+  subgraph Master Entities
+    Customers[(Customers)]
+    Products[(Products)]
+    Properties[(Properties)]
+    Securities[(Securities)]
+  end
+
+  CRM --> MatchMerge
+  ERP --> MatchMerge
+  RealEstate --> MatchMerge
+  Trading --> MatchMerge
+
+  MatchMerge --> GoldenRecord
+  GoldenRecord --> Customers
+  GoldenRecord --> Products
+  GoldenRecord --> Properties
+  GoldenRecord --> Securities
+
+  Governance --> GoldenRecord
+  Metadata --> GoldenRecord

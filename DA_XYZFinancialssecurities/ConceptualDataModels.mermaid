@@ -1,0 +1,38 @@
+%% Conceptual Data Model
+classDiagram
+    class Customer {
+        +CustomerID
+        +Name
+        +DateOfBirth
+        +Address
+    }
+    class Application {
+        +ApplicationID
+        +CustomerID
+        +ApplicationDate
+        +Status
+    }
+    class Loan {
+        +LoanID
+        +ApplicationID
+        +Amount
+        +InterestRate
+        +Term
+    }
+    class Payment {
+        +PaymentID
+        +LoanID
+        +PaymentDate
+        +Amount
+    }
+    class RiskAssessment {
+        +AssessmentID
+        +ApplicationID
+        +RiskScore
+        +AssessmentDate
+    }
+
+    Customer --> Application
+    Application --> Loan
+    Loan --> Payment
+    Application --> RiskAssessment
