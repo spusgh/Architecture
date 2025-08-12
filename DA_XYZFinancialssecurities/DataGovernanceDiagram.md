@@ -16,7 +16,8 @@ The Data Governance Diagram helps:
 
 ## 🖼️ Diagram Overview
 
-![Data Governance Diagram](./data_governance_diagram.png)
+![Data Governance Diagram](./DataGovernanceDiagram.png) <br/>
+![Data Governance Mermaid Diagram](./DataGovernance.mermaid)
 
 ### 🔹 Legend
 - 🔴 **Sensitive Fields**: SSN, CreditScore, AnnualIncome
