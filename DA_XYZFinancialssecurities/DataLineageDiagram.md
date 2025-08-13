@@ -17,7 +17,7 @@ Data lineage tracks the origin, movement, and transformation of data across syst
 
 ## 📊 Data Lineage Diagram
 ![Data Lineage Diagram](./DataLineageDiagram.png)
-![Data Lineage Mermaid Diagram](./DataLineageDiagram.mermaid)
+[Data Lineage Mermaid Diagram](./DataLineage.mermaid)
 
 
 ## 🧭 Key Data Elements Tracked

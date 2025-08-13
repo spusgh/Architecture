@@ -28,7 +28,7 @@ The MDM system is designed to:
 
 ## 🖼️ Diagram Overview
 
-![MDM Architecture Mermaid Diagram](./MDMArchitectureDiagram.mermaid)
+[MDM Architecture Mermaid Diagram](./MDMArchitectureDiagram.mermaid)
 
 ---
 

@@ -12,7 +12,7 @@ The star schema enables efficient querying and aggregation of key metrics across
 
 ## 🖼️ Diagram Overview
 
-![Star Schema Dimensional Model Mermaid Diagram](./StarSchemaDimensionalModel.mermaid)
+[Star Schema Dimensional Model Mermaid Diagram](./StarSchemaDimensionalModel.mermaid)
 
 ---
 

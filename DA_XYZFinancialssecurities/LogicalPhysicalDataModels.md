@@ -12,7 +12,7 @@ This repository contains three levels of data modeling for a mortgage management
 
 #### 🖼️ Diagram Overview
 
-![Conceptual Data Models Diagram](./ConceptualDataModels.mermaid)
+[Conceptual Data Models Diagram](./ConceptualDataModels.mermaid)
 
 Entities and Relationships:
 A Customer can apply for multiple Mortgages<br/>
@@ -37,7 +37,7 @@ A LoanOfficer manages many Mortgages<br/>
 
 #### 🖼️ Diagram Overview
 
-![Logical Data Models Diagram](./LogicalDataModel.mermaid)
+[Logical Data Models Diagram](./LogicalDataModel.mermaid)
 
 | Entity | Attributes |
 | :--- | :--- |
@@ -66,7 +66,7 @@ A LoanOfficer manages many Mortgages<br/>
 
 #### 🖼️ Diagram Overview
 
-![Physical Data Models Diagram](./PhysicalDataModel.mermaid)
+[Physical Data Models Diagram](./PhysicalDataModel.mermaid)
 
 ```sql
 CREATE TABLE Customer (
