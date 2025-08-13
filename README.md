@@ -29,6 +29,7 @@ There are several types of software architecture patterns, each suited for diffe
 - Peer-to-Peer Architecture – Allows nodes to communicate directly without a central server, often used in decentralized systems.
 
 ## Data Architecture
+
 Data architecture can be classified under SaaS (Software as a Service), BI (Business Intelligence), or Database depending on its purpose and implementation:
 - SaaS Data Architecture – Focuses on managing cloud-based applications and ensuring data integrity, security, and scalability for multi-tenant environments. It often integrates with cloud platforms to optimize performance.
 - BI Data Architecture – Designed for analytics and reporting, involving data ingestion, preparation, warehousing, and visualization. It supports structured data models for enterprise reporting.
@@ -46,6 +47,9 @@ Data architecture classifications define how data is structured, stored, and man
 - Data Lake Architecture – Stores raw, unstructured data for future processing and analysis.
 - Data Warehouse Architecture – Organizes structured data for reporting and analytics.
 - Event-Driven Architecture – Processes data in real-time based on triggered events.
+
+#### Data Architecture POC
+<li><a href="https://github.com/spusgh/Architecture/tree/main/DA_XYZFinancialssecurities">Mortgage Lending & Servicing Data Schema</a></li>
 
 
 ## Solution Architecture

@@ -8,6 +8,12 @@ This repository contains three levels of data modeling for a mortgage management
 - Useful for discussions with stakeholders and domain experts
 
 ### 🧠 Conceptual Data Model
+---
+
+#### 🖼️ Diagram Overview
+
+![Conceptual Data Models Diagram](./ConceptualDataModels.mermaid)
+
 Entities and Relationships:
 A Customer can apply for multiple Mortgages<br/>
 Each Mortgage is linked to one Property<br/>
@@ -27,6 +33,12 @@ A LoanOfficer manages many Mortgages<br/>
 - Platform-independent design
 
 ### 📐 Logical Data Model
+---
+
+#### 🖼️ Diagram Overview
+
+![Logical Data Models Diagram](./LogicalDataModel.mermaid)
+
 | Entity | Attributes |
 | :--- | :--- |
 |Customer	| CustomerID (PK), Name, Email, Phone, SSN |
@@ -50,6 +62,12 @@ A LoanOfficer manages many Mortgages<br/>
 - Includes documentation for developers and data engineers
 
 ### 🏗️ Physical Data Model
+---
+
+#### 🖼️ Diagram Overview
+
+![Physical Data Models Diagram](./PhysicalDataModel.mermaid)
+
 ```sql
 CREATE TABLE Customer (
     CustomerID SERIAL PRIMARY KEY,

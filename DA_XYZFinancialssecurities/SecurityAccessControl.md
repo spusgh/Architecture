@@ -4,6 +4,12 @@ This document outlines the access control model for the mortgage lending schema.
 
 ---
 
+## 🖼️ Diagram Overview
+
+![Security Access Control Mermaid Diagram](./SecurityAccessControlDiagram.mermaid)
+
+---
+
 ## 🧑‍💼 Roles & Responsibilities
 
 | Role             | Description                                      |

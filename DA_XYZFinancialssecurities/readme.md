@@ -46,21 +46,34 @@ Refer to the ERD image for a visual representation of relationships between enti
 ## 📊 Data Modeling Diagrams
 
 #### 🧭 1. Entity-Relationship Diagram (ERD)
+![ERD Diagram](./ERD.png) <br/>
+![ERD Mermaid Diagram](./ERD.mermaid)
+
 Purpose: Visualize tables, attributes, and relationships <br/>
 Use Cases: Database design, normalization, foreign key mapping <br/>
-Tools: dbdiagram.io, Lucidchart, DrawSQL
+Tools: Mermaid.io, Lucidchart, DrawSQL
 
 #### 🔄 2. Data Flow Diagram (DFD)
+![Data Flow Diagram-Mortgage Lending & Servicing Aystem Architecture](./DataFlowDiagram-Mortgage Lending & Servicing Aystem Architecture.png) <br/>
+![DFD Level 0 High Level System Diagram](./DFDLevel0HighLevelSystemDiagram.mermaid)
+![DFD Level 1 Detailed System Diagram](./DFDLevel1DetailedSystemDiagram.mermaid)
+![DFD Level 2 Detailed ETL APIs Data Stores Diagram](./DFDLevel2DetailedETLAPIsDataStores.mermaid)
+
 Purpose: Show how data moves between systems, processes, and stores Use Cases: System architecture, ETL design, integration planning Levels:<br/>
 Level 0: High-level system overview<br/>
 Level 1+: Detailed flows between components (e.g., loan origination → risk assessment → servicing)<br/>
 
 #### 🏗️ 3. Star Schema / Dimensional Model
+![Star Schema Dimensional Model Mermaid Diagram](./StarSchemaDimensionalModel.mermaid)
+
 Purpose: Design for analytics and reporting Use Cases: Data warehouse, BI dashboards Components:<br/>
 Fact tables: Loans, Payments, Applications<br/>
 Dimension tables: Customers, Products, Properties, Dates<br/>
 
 #### 🧬 4. Data Lineage Diagram
+![Data Lineage Diagram](./DataLineageDiagram.png)
+![Data Lineage Mermaid Diagram](./DataLineageDiagram.mermaid)
+
 Purpose: Trace origin, transformation, and destination of data <br/>
 Use Cases: Compliance, debugging, impact analysis <br/>
 Example: CustomerID flows from Applications → Loans → Payments
@@ -76,6 +89,10 @@ Use Cases: Regulatory compliance, data quality management Includes:<br/>
 - Validation rules<br/>
 
 #### 🧠 6. Conceptual, Logical, and Physical Data Models
+![Conceptual Data Models Diagram](./ConceptualDataModels.mermaid) <br/>
+![Logical Data Models Diagram](./LogicalDataModel.mermaid) <br/>
+![Physical Data Model Mermaid Diagram](./PhysicalDataModel.mermaid) <br/>
+
 |Model Type	|Description	|Audience|
 | :- |:- | :- |
 |Conceptual	| High-level entities and relationships	| Business stakeholders|
@@ -83,6 +100,10 @@ Use Cases: Regulatory compliance, data quality management Includes:<br/>
 |Physical	| Actual implementation with data types and indexes	| DBAs, developers|
 
 #### 📊 7. Dashboard Wireframes / BI Schema
+![Loan Performance Over Time](loan_performance.png)
+![Risk Classification Heatmap](risk_classification_heatmap.png)
+![Escrow Balance Trends](escrow_balance_trends.png)
+
 Purpose: Visualize how data supports KPIs and metrics <br/>
 Use Cases: Reporting, executive dashboards Examples:<br/>
 - Loan performance dashboard
@@ -90,17 +111,23 @@ Use Cases: Reporting, executive dashboards Examples:<br/>
 - Escrow balance trends
 
 #### 🔐 8. Security & Access Control Diagram
+![Security Access Control Mermaid Diagram](./SecurityAccessControlDiagram.mermaid)
+
 Purpose: Define roles, permissions, and access boundaries <br/>
 Use Cases: Role-based access, audit planning Includes:
 - Who can view/edit AuditLog, DocumentsRegistry
 - Data masking for PII fields
 
 #### 🔧 9. ETL Pipeline Diagram
+![ETL Pipeline Mermaid Diagram](./ETLPipelineDiagram.mermaid)
+
 Purpose: Show extraction, transformation, and loading processes <br/>
 Use Cases: Data engineering, scheduling, monitoring <br/>
 Example: CapitalMarketData → Cleanse → Enrich → Load to DW
 
 #### 🧭 10. Master Data Management (MDM) Architecture
+![MDM Architecture Mermaid Diagram](./MDMArchitectureDiagram.mermaid)
+
 Purpose: Centralize and govern master entities <br/>
 Use Cases: Golden record creation, deduplication <br/>
 Entities: Customers, Products, Properties, Securities

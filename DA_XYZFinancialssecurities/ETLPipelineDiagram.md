@@ -4,6 +4,12 @@ This document outlines the ETL (Extract, Transform, Load) pipeline used to popul
 
 ---
 
+## 🖼️ Diagram Overview
+
+![ETL Pipeline Mermaid Diagram](./ETLPipelineDiagram.mermaid)
+
+---
+
 ## 🔍 Extract
 
 Data is sourced from various systems:

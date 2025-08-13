@@ -18,10 +18,14 @@ This project outlines Business Intelligence dashboards and schema design for a m
 generated three visualizations:
 
 📈 Loan Performance Over Time (loan_performance.png)
+![Loan Performance Over Time](loan_performance.png)
 
 💰 Escrow Balance Trends (escrow_balance.png)
+![Escrow Balance Trends](escrow_balance.png)
 
 🔥 Risk Classification Distribution (risk_classification.png)
+![Risk Classification Distribution](risk_classification.png)
+
 
 ### 📊 Summary Metrics
 - Average Loan Performance: ~92.5%

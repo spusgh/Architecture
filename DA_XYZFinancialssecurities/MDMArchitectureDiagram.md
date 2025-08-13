@@ -26,6 +26,12 @@ The MDM system is designed to:
 
 ---
 
+## 🖼️ Diagram Overview
+
+![MDM Architecture Mermaid Diagram](./MDMArchitectureDiagram.mermaid)
+
+---
+
 ## 🔄 Use Cases
 
 - **Golden Record Creation**: Consolidate duplicate records into a single authoritative version
