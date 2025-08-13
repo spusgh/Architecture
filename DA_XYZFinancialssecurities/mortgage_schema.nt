@@ -1,0 +1,11 @@
+<http://example.org/mortgage#Loan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/mortgage#Loan> <http://www.w3.org/2000/01/rdf-schema#label> "Loan" .
+
+<http://example.org/mortgage#Customer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://example.org/mortgage#Customer> <http://www.w3.org/2000/01/rdf-schema#label> "Customer" .
+
+<http://example.org/mortgage#hasCustomer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://example.org/mortgage#hasCustomer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://example.org/mortgage#Loan> .
+<http://example.org/mortgage#hasCustomer> <http://www.w3.org/2000/01/rdf-schema#range> <http://example.org/mortgage#Customer> .
+<http://example.org/mortgage#hasCustomer> <http://www.w3.org/2000/01/rdf-schema#label> "hasCustomer" .
+<http://example.org/mortgage#loanAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .

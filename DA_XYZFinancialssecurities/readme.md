@@ -148,6 +148,9 @@ Purpose: Centralize and govern master entities <br/>
 Use Cases: Golden record creation, deduplication <br/>
 Entities: Customers, Products, Properties, Securities
 
+#### 🧭 11. Mortgage Ontology Taxonomy
+<a href="ontologytaxonmy.md" target="_blank">Mortgage Ontology Taxonomy - .RDF, N-Triples, Turtle</a> <br/><br/>
+
 
 ## 📂 Table Descriptions
 

@@ -1,0 +1,13 @@
+@prefix ex: <http://example.org/mortgage#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Loan123 a ex:Loan ;
+    ex:loanAmount "250000.00"^^xsd:decimal ;
+    ex:interestRate "3.5"^^xsd:decimal ;
+    ex:hasCustomer ex:Customer456 .
+
+ex:Customer456 a ex:Customer ;
+    ex:hasApplication ex:Application789 .
+
+ex:Application789 a ex:Application ;
+    ex:applicationDate "2025-08-12"^^xsd:date .
