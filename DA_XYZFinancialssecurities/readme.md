@@ -54,7 +54,7 @@ Use Cases: Database design, normalization, foreign key mapping <br/>
 Tools: Mermaid.io, Lucidchart, DrawSQL
 
 #### 🔄 2. Data Flow Diagram (DFD)
-![Data Flow Diagram-Mortgage Lending & Servicing Aystem Architecture](./DataFlowDiagram-Mortgage%20Lending%20%26%20Servicing%20Aystem%20Architecture.png.png) <br/>
+![Data Flow Diagram-Mortgage Lending & Servicing Aystem Architecture](./DataFlowDiagram-Mortgage%20Lending%20%26%20Servicing%20Aystem%20Architecture.png) <br/>
 [DFD Level 0 High Level System Diagram](./DFDLevel0HighLevelSystemDiagram.mermaid) <br/>
 [DFD Level 1 Detailed System Diagram](./DFDLevel1DetailedSystemDiagram.mermaid)<br/>
 [DFD Level 2 Detailed ETL APIs Data Stores Diagram](./DFDLevel2DetailedETLAPIsDataStores.mermaid)
