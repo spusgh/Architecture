@@ -64,6 +64,8 @@ Level 0: High-level system overview<br/>
 Level 1+: Detailed flows between components (e.g., loan origination → risk assessment → servicing)<br/>
 
 #### 🏗️ 3. Star Schema / Dimensional Model
+<a href="StarSchemaDimensionalModel.md" target="_blank">Star Schema Dimensional Model</a> <br/><br/>
+
 [Star Schema Dimensional Model Mermaid Diagram](./StarSchemaDimensionalModel.mermaid)
 
 Purpose: Design for analytics and reporting Use Cases: Data warehouse, BI dashboards Components:<br/>
@@ -71,14 +73,18 @@ Fact tables: Loans, Payments, Applications<br/>
 Dimension tables: Customers, Products, Properties, Dates<br/>
 
 #### 🧬 4. Data Lineage Diagram
+<a href="DataLineageDiagram.md" target="_blank">Data Lineage</a> <br/><br/>
+
 ![Data Lineage Diagram](./DataLineageDiagram.png)
-[Data Lineage Mermaid Diagram](./DataLineageDiagram.mermaid)
+[Data Lineage Mermaid Diagram](./DataLineage.mermaid)
 
 Purpose: Trace origin, transformation, and destination of data <br/>
 Use Cases: Compliance, debugging, impact analysis <br/>
 Example: CustomerID flows from Applications → Loans → Payments
 
 #### 🛡️ 5. Data Governance Diagram
+<a href="DataGovernanceDiagram.md" target="_blank">Data Governance</a> <br/><br/>
+
 ![Data Governance Diagram](./DataGovernanceDiagram.png) <br/>
 [Data Governance Mermaid Diagram](./DataGovernance.mermaid)
 
@@ -89,6 +95,8 @@ Use Cases: Regulatory compliance, data quality management Includes:<br/>
 - Validation rules<br/>
 
 #### 🧠 6. Conceptual, Logical, and Physical Data Models
+<a href="LogicalPhysicalDataModels.md" target="_blank">Logical Physical Data Models</a> <br/><br/>
+
 [Conceptual Data Models Diagram](./ConceptualDataModels.mermaid) <br/>
 [Logical Data Models Diagram](./LogicalDataModel.mermaid) <br/>
 [Physical Data Model Mermaid Diagram](./PhysicalDataModel.mermaid) <br/>
@@ -100,6 +108,8 @@ Use Cases: Regulatory compliance, data quality management Includes:<br/>
 |Physical	| Actual implementation with data types and indexes	| DBAs, developers|
 
 #### 📊 7. Dashboard Wireframes / BI Schema
+<a href="MortgageBIDashboard.md" target="_blank">Mortgage BI Dashboard</a> <br/><br/>
+
 ![Loan Performance Over Time](loan_performance.png)
 ![Risk Classification Heatmap](risk_classification.png)
 ![Escrow Balance Trends](escrow_balance.png.png)
@@ -111,6 +121,8 @@ Use Cases: Reporting, executive dashboards Examples:<br/>
 - Escrow balance trends
 
 #### 🔐 8. Security & Access Control Diagram
+<a href="SecurityAccessControl.md" target="_blank">Security Access Control</a> <br/><br/>
+
 [Security Access Control Mermaid Diagram](./SecurityAccessControlDiagram.mermaid)
 
 Purpose: Define roles, permissions, and access boundaries <br/>
@@ -119,6 +131,8 @@ Use Cases: Role-based access, audit planning Includes:
 - Data masking for PII fields
 
 #### 🔧 9. ETL Pipeline Diagram
+<a href="ETLPipelineDiagram.md" target="_blank">Data ETL Pipeline</a> <br/><br/>
+
 [ETL Pipeline Mermaid Diagram](./ETLPipelineDiagram.mermaid)
 
 Purpose: Show extraction, transformation, and loading processes <br/>
@@ -126,6 +140,8 @@ Use Cases: Data engineering, scheduling, monitoring <br/>
 Example: CapitalMarketData → Cleanse → Enrich → Load to DW
 
 #### 🧭 10. Master Data Management (MDM) Architecture
+<a href="MDMArchitectureDiagram.md" target="_blank">MDM Architecture</a> <br/><br/>
+
 [MDM Architecture Mermaid Diagram](./MDMArchitectureDiagram.mermaid)
 
 Purpose: Centralize and govern master entities <br/>
