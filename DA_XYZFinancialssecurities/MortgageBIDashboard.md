@@ -21,7 +21,7 @@ generated three visualizations:
 ![Loan Performance Over Time](loan_performance.png)
 
 💰 Escrow Balance Trends (escrow_balance.png)
-![Escrow Balance Trends](escrow_balance.png)
+![Escrow Balance Trends](escrow_balance.png.png)
 
 🔥 Risk Classification Distribution (risk_classification.png)
 ![Risk Classification Distribution](risk_classification.png)
