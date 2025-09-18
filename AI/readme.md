@@ -83,6 +83,13 @@ AI systems combine software engineering, data science, and cloud-native infrastr
 
 ---
 
+## 📡 AI API & Data Contracts
+- <a href="https://htmlpreview.github.io/?https://github.com/spusgh/Architecture/blob/main/AI/ai_api_comparison_table.html">AI API Types - Comprehensive Analysis</a> <br/>
+-  <a href="https://htmlpreview.github.io/?https://github.com/spusgh/Architecture/blob/main/AI/mcp_presentation.html">Model Consumption for AI APIs
+ </a>
+
+---
+
 ## 🔗 Integration Patterns
 
 | **Pattern**                  | **Description**                                                                 |
@@ -216,7 +223,6 @@ This framework aligns with SWEBoK knowledge areas:
 ## 🧪 Proof of Concept (POC)
 
 The following POC demonstrates a real-world implementation of system integration principles:
-
 - <a href="https://github.com/spusgh/Architecture/blob/main/Integration/msteams_integration_readme.md">**Integration Scenario**: Microsoft Teams integration for meeting recording, transcription, and PII profile creation.</a>
 
 ---
