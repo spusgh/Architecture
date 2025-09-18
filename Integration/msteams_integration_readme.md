@@ -1,9 +1,23 @@
+
 # Microsoft Teams Meeting Intelligence Integration
 
 ## 🚀 Overview
 
 A comprehensive Microsoft Teams integration that automatically records meetings, transcribes conversations, extracts participant information, and creates intelligent user profiles using AI-powered matching and vector databases.
 
+**Scenario**: Microsoft Teams integration for meeting recording, transcription, and PII profile creation.
+- **Components**:
+  - **Recording & Transcription**: Microsoft Graph API + Azure Cognitive Services
+  - **Video Storage**: OneDrive/SharePoint via Microsoft Stream (new)
+  - **Transcript Parsing**: Python + FastAPI with LangChain for speaker attribution
+  - **PII Matching**: Vector database (e.g., Weaviate or Qdrant) with semantic search
+  - **Profile Storage**: Hybrid SQL + AI-enhanced metadata layer
+  - **UI Integration**: Teams Adaptive Cards with shareable video/transcript buttons
+- **Security**: Role-based access, encryption, and compliance with HIPAA/GDPR
+- **Outcome**: Seamless capture, enrichment, and retrieval of meeting intelligence with automated profile matching
+
+- **⚠️ Important**: Ensure compliance with your organization's data governance policies and obtain necessary permissions before deploying in production environments.
+- 
 ## 🏗️ Architecture Diagram
 
 ```mermaid
@@ -176,7 +190,4 @@ npm install
 
 ```
 
-
-
-**⚠️ Important**: Ensure compliance with your organization's data governance policies and obtain necessary permissions before deploying in production environments.
 
