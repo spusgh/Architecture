@@ -77,4 +77,3 @@ The following POC demonstrates a real-world implementation of system integration
 
 ---
 
-Let me know if you'd like this converted into a stakeholder slide deck or visual architecture canvas.
