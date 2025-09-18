@@ -17,7 +17,7 @@ A comprehensive Microsoft Teams integration that automatically records meetings,
 - **Outcome**: Seamless capture, enrichment, and retrieval of meeting intelligence with automated profile matching
 
 - **⚠️ Important**: Ensure compliance with your organization's data governance policies and obtain necessary permissions before deploying in production environments.
-- 
+
 ## 🏗️ Architecture Diagram
 
 ```mermaid
