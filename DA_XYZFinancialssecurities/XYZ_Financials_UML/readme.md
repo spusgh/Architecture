@@ -3,7 +3,7 @@
 This repository contains modular PlantUML class diagrams for the XYZ Financials database schema. Each `.puml` file represents a distinct domain, making it easier to visualize relationships and maintain documentation.
 
 
-![PlantUML diagrams for the XYZ Financials database schema](./XYZ_Financials_UML/XYZFinUML.puml) <br/>
+![PlantUML diagrams for the XYZ Financials database schema](./XYZFinUML.puml) <br/>
 
 
 ## 📦 Modules
@@ -14,7 +14,7 @@ This repository contains modular PlantUML class diagrams for the XYZ Financials 
 - Shows relationships between customers, applications, and assigned loan officers
 - Captures applicant metadata, employment, and credit details
 
-```puml
+```plantuml 
 @startuml Customer_Application
 class Customers {
   +CustomerID : int
@@ -59,7 +59,7 @@ Applications --> LoanOfficers : assigned to
 - Highlights financial attributes like interest, escrow, and payment schedules
 - Links loans to applications and customers
 
-```puml
+```plantuml
 
 @startuml Loan_Payment
 class Loans {
@@ -106,7 +106,7 @@ Loans --> ServicingRights : serviced by
 - Includes escrow transactions and analysis dates
 - Connects loans to collateral properties and escrow flows
 
-```puml
+```plantuml
 
 @startuml Property_Escrow
 class PropertyDetails {
@@ -145,7 +145,7 @@ EscrowAccounts --> EscrowTransactions : records
 - Captures approval status, upload metadata, and change history
 - Useful for compliance, traceability, and governance
 
-```puml
+```plantuml
 
 @startuml Documents_Audit
 class DocumentsRegistry {
@@ -179,7 +179,7 @@ AuditLog --> Customers : logs
 - Includes credit scoring, DTI, LTV, and macroeconomic indicators
 - Links loan performance to external market rates and risk classifications
 
-```puml
+```plantuml
 
 @startuml Risk_CapitalMarkets
 class RiskAssessments {
@@ -219,7 +219,7 @@ CapitalMarketData --> Loans : informs pricing
 - Includes CUSIP, coupon rates, maturity dates, and regulatory flags
 - Connects loans to underlying financial instruments and product definitions
 
-```puml
+```plantuml
 
 @startuml Securities_Products
 class Securities {
