@@ -1,0 +1,158 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+' === Core Entities ===
+class Customers {
+  +CustomerID : int
+  FirstName : nvarchar(50)
+  LastName : nvarchar(50)
+  SSN : char(11)
+  DateOfBirth : date
+  Email : nvarchar(100)
+  Phone : nvarchar(20)
+  AnnualIncome : decimal(15,2)
+  EmploymentStatus : nvarchar(50)
+  Employer : nvarchar(100)
+  YearsEmployed : int
+  CreditScore : int
+  CreatedDate : datetime
+  LastUpdatedDate : datetime
+}
+
+class Applications {
+  +ApplicationID : int
+  CustomerID : int
+  ProductID : int
+  OfficerID : int
+  ApplicationDate : datetime
+  LoanAmount : decimal(15,2)
+  LoanPurpose : nvarchar(50)
+  Status : nvarchar(50)
+  ClosingDate : date
+  ApplicationFee : decimal(10,2)
+  DTI : decimal(5,2)
+  PropertyValue : decimal(15,2)
+  LTV : decimal(5,2)
+  RateOffered : decimal(5,3)
+  TermOffered : int
+  DenialReason : nvarchar(255)
+}
+
+class Loans {
+  +LoanID : int
+  ApplicationID : int
+  CustomerID : int
+  PropertyID : int
+  ProductID : int
+  LoanAmount : decimal(15,2)
+  InterestRate : decimal(5,3)
+  Term : int
+  OriginationDate : date
+  MaturityDate : date
+  MonthlyPayment : decimal(12,2)
+  RemainingBalance : decimal(15,2)
+  Status : nvarchar(20)
+  EscrowRequired : bit
+  PMIRequired : bit
+  PMIAmount : decimal(10,2)
+  FirstPaymentDate : date
+  NextPaymentDate : date
+  PaymentFrequency : nvarchar(20)
+  SecurityID : int
+  LastUpdatedDate : date
+}
+
+class Payments {
+  +PaymentID : int
+  LoanID : int
+  PaymentDate : date
+  PaymentAmount : decimal(12,2)
+  PrincipalAmount : decimal(12,2)
+  InterestAmount : decimal(12,2)
+  EscrowAmount : decimal(12,2)
+  LateFeeAmount : decimal(10,2)
+  PaymentMethod : nvarchar(50)
+  TransactionID : nvarchar(100)
+  PaymentStatus : nvarchar(20)
+  ProcessedDate : datetime
+}
+
+class LoanOfficers {
+  +OfficerID : int
+  FirstName : nvarchar(50)
+  LastName : nvarchar(50)
+  Email : nvarchar(100)
+  Phone : nvarchar(20)
+  BranchID : int
+  HireDate : date
+  CommissionRate : decimal(5,2)
+  Status : nvarchar(20)
+}
+
+class MortgageProducts {
+  +ProductID : int
+  ProductName : nvarchar(100)
+  ProductType : nvarchar(50)
+  Term : int
+  BaseInterestRate : decimal(5,3)
+  MinCreditScore : int
+  MaxLTV : decimal(5,2)
+  MinLoanAmount : decimal(15,2)
+  MaxLoanAmount : decimal(15,2)
+  OriginationFee : decimal(5,2)
+  IsActive : bit
+}
+
+class PropertyDetails {
+  +PropertyID : int
+  AddressLine1 : nvarchar(100)
+  AddressLine2 : nvarchar(100)
+  City : nvarchar(50)
+  State : char(2)
+  ZipCode : nvarchar(10)
+  Country : nvarchar(50)
+  PropertyType : nvarchar(50)
+  YearBuilt : int
+  SquareFeet : int
+  Bedrooms : int
+  Bathrooms : decimal(3,1)
+  PurchasePrice : decimal(15,2)
+  CurrentValue : decimal(15,2)
+  LastAppraisalDate : date
+  LastAppraisalValue : decimal(15,2)
+  TaxAssessmentValue : decimal(15,2)
+  AnnualTaxAmount : decimal(10,2)
+  HOAFees : decimal(10,2)
+  FloodZone : nvarchar(10)
+  PropertyTaxID : nvarchar(50)
+  Latitude : decimal(9,6)
+  Longitude : decimal(9,6)
+}
+
+class Securities {
+  +SecurityID : int
+  SecurityName : nvarchar(100)
+  SecurityType : nvarchar(50)
+  CUSIP : nvarchar(9)
+  IssueDate : date
+  MaturityDate : date
+  CouponRate : decimal(5,3)
+  FaceValue : decimal(15,2)
+  CurrentBalance : decimal(15,2)
+  Issuer : nvarchar(100)
+  Rating : nvarchar(10)
+  Status : nvarchar(20)
+  LastTradeDate : date
+  LastTradePrice : decimal(10,3)
+}
+
+' === Relationships ===
+Customers --> Applications : has
+Applications --> Loans : originates
+Loans --> Payments : generates
+Loans --> Securities : backed by
+Applications --> LoanOfficers : assigned to
+Applications --> MortgageProducts : requests
+Loans --> PropertyDetails : secured by
+
+@enduml
