@@ -1,0 +1,35 @@
+@startuml Customer_Application
+class Customers {
+  +CustomerID : int
+  FirstName : nvarchar(50)
+  LastName : nvarchar(50)
+  ...
+}
+
+class CustomerAddresses {
+  +AddressID : int
+  CustomerID : int
+  AddressType : nvarchar(20)
+  ...
+}
+
+class Applications {
+  +ApplicationID : int
+  CustomerID : int
+  ProductID : int
+  OfficerID : int
+  ...
+}
+
+class LoanOfficers {
+  +OfficerID : int
+  FirstName : nvarchar(50)
+  LastName : nvarchar(50)
+  ...
+}
+
+Customers --> CustomerAddresses : has
+Customers --> Applications : submits
+Applications --> LoanOfficers : assigned to
+
+@enduml
