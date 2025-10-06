@@ -1,0 +1,23 @@
+
+@startuml Documents_Audit
+class DocumentsRegistry {
+  +DocumentID : int
+  ApplicationID : int
+  DocumentType : nvarchar(100)
+  ...
+}
+
+class AuditLog {
+  +LogID : int
+  EntityType : nvarchar(50)
+  EntityID : int
+  ...
+}
+
+Applications --> DocumentsRegistry : includes
+AuditLog --> Applications : logs
+AuditLog --> Loans : logs
+AuditLog --> Customers : logs
+
+@enduml
+

@@ -1,0 +1,26 @@
+@startuml Property_Escrow
+class PropertyDetails {
+  +PropertyID : int
+  AddressLine1 : nvarchar(100)
+  ...
+}
+
+class EscrowAccounts {
+  +EscrowID : int
+  LoanID : int
+  CurrentBalance : decimal
+  ...
+}
+
+class EscrowTransactions {
+  +TransactionID : int
+  EscrowID : int
+  TransactionDate : date
+  ...
+}
+
+Loans --> PropertyDetails : secured by
+Loans --> EscrowAccounts : has
+EscrowAccounts --> EscrowTransactions : records
+
+@enduml

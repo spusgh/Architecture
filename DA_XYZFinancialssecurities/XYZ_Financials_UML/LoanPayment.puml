@@ -1,0 +1,36 @@
+
+@startuml Loan_Payment
+class Loans {
+  +LoanID : int
+  ApplicationID : int
+  CustomerID : int
+  ...
+}
+
+class Payments {
+  +PaymentID : int
+  LoanID : int
+  PaymentDate : date
+  ...
+}
+
+class LoanTermModifications {
+  +ModificationID : int
+  LoanID : int
+  ModificationDate : date
+  ...
+}
+
+class ServicingRights {
+  +ServicingID : int
+  LoanID : int
+  ServicerName : nvarchar(100)
+  ...
+}
+
+Loans --> Payments : generates
+Loans --> LoanTermModifications : modified by
+Loans --> ServicingRights : serviced by
+
+@enduml
+

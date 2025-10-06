@@ -23,45 +23,6 @@ This repository contains modular PlantUML class diagrams for the XYZ Financials 
 - Highlights financial attributes like interest, escrow, and payment schedules
 - Links loans to applications and customers
 
-```plantuml
-
-@startuml Loan_Payment
-class Loans {
-  +LoanID : int
-  ApplicationID : int
-  CustomerID : int
-  ...
-}
-
-class Payments {
-  +PaymentID : int
-  LoanID : int
-  PaymentDate : date
-  ...
-}
-
-class LoanTermModifications {
-  +ModificationID : int
-  LoanID : int
-  ModificationDate : date
-  ...
-}
-
-class ServicingRights {
-  +ServicingID : int
-  LoanID : int
-  ServicerName : nvarchar(100)
-  ...
-}
-
-Loans --> Payments : generates
-Loans --> LoanTermModifications : modified by
-Loans --> ServicingRights : serviced by
-
-@enduml
-
-
-```
 
 
 ### 3. Property & Escrow Domain
@@ -70,37 +31,6 @@ Loans --> ServicingRights : serviced by
 - Includes escrow transactions and analysis dates
 - Connects loans to collateral properties and escrow flows
 
-```plantuml
-
-@startuml Property_Escrow
-class PropertyDetails {
-  +PropertyID : int
-  AddressLine1 : nvarchar(100)
-  ...
-}
-
-class EscrowAccounts {
-  +EscrowID : int
-  LoanID : int
-  CurrentBalance : decimal
-  ...
-}
-
-class EscrowTransactions {
-  +TransactionID : int
-  EscrowID : int
-  TransactionDate : date
-  ...
-}
-
-Loans --> PropertyDetails : secured by
-Loans --> EscrowAccounts : has
-EscrowAccounts --> EscrowTransactions : records
-
-@enduml
-
-
-```
 
 
 ### 4. Documents & Audit Domain
@@ -109,33 +39,6 @@ EscrowAccounts --> EscrowTransactions : records
 - Captures approval status, upload metadata, and change history
 - Useful for compliance, traceability, and governance
 
-```plantuml
-
-@startuml Documents_Audit
-class DocumentsRegistry {
-  +DocumentID : int
-  ApplicationID : int
-  DocumentType : nvarchar(100)
-  ...
-}
-
-class AuditLog {
-  +LogID : int
-  EntityType : nvarchar(50)
-  EntityID : int
-  ...
-}
-
-Applications --> DocumentsRegistry : includes
-AuditLog --> Applications : logs
-AuditLog --> Loans : logs
-AuditLog --> Customers : logs
-
-@enduml
-
-
-```
-
 
 ### 5. Risk & Capital Markets Domain
 
@@ -143,38 +46,6 @@ AuditLog --> Customers : logs
 - Includes credit scoring, DTI, LTV, and macroeconomic indicators
 - Links loan performance to external market rates and risk classifications
 
-```plantuml
-
-@startuml Risk_CapitalMarkets
-class RiskAssessments {
-  +AssessmentID : int
-  CustomerID : int
-  ApplicationID : int
-  ...
-}
-
-class CapitalMarketData {
-  +MarketDataID : int
-  DataDate : date
-  Treasury10Y : decimal
-  ...
-}
-
-class DefaultsForeclosures {
-  +DefaultID : int
-  LoanID : int
-  DefaultDate : date
-  ...
-}
-
-Applications --> RiskAssessments : evaluated by
-Loans --> DefaultsForeclosures : may default
-CapitalMarketData --> Loans : informs pricing
-
-@enduml
-
-
-```
 
 
 ### 6. Securities & Products Domain
@@ -183,48 +54,6 @@ CapitalMarketData --> Loans : informs pricing
 - Includes CUSIP, coupon rates, maturity dates, and regulatory flags
 - Connects loans to underlying financial instruments and product definitions
 
-```plantuml
-
-@startuml Securities_Products
-class Securities {
-  +SecurityID : int
-  SecurityName : nvarchar(100)
-  ...
-}
-
-class FINRA_FI {
-  +PKID : tinyint
-  Symbol : nvarchar(50)
-  ...
-}
-
-class MortgageProducts {
-  +ProductID : int
-  ProductName : nvarchar(100)
-  ...
-}
-
-class ProductSubtype {
-  +PTID : int
-  ProdType : nchar(50)
-  ...
-}
-
-class InterestType {
-  +ITID : int
-  InterestTypeID : nchar(10)
-  ...
-}
-
-Loans --> Securities : backed by
-Applications --> MortgageProducts : requests
-MortgageProducts --> ProductSubtype : categorized by
-Securities --> FINRA_FI : maps to
-
-@enduml
-
-
-```
 
 
 ## 📜 License

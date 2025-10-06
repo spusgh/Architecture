@@ -1,0 +1,28 @@
+@startuml Risk_CapitalMarkets
+class RiskAssessments {
+  +AssessmentID : int
+  CustomerID : int
+  ApplicationID : int
+  ...
+}
+
+class CapitalMarketData {
+  +MarketDataID : int
+  DataDate : date
+  Treasury10Y : decimal
+  ...
+}
+
+class DefaultsForeclosures {
+  +DefaultID : int
+  LoanID : int
+  DefaultDate : date
+  ...
+}
+
+Applications --> RiskAssessments : evaluated by
+Loans --> DefaultsForeclosures : may default
+CapitalMarketData --> Loans : informs pricing
+
+@enduml
+
