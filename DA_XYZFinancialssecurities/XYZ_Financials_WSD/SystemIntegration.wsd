@@ -1,0 +1,3 @@
+title System & Integration Flow
+ExternalSystems->APIGateway: API calls
+APIGateway->Applications: Route requests

@@ -1,0 +1,3 @@
+title Reporting & Compliance Flow
+Loans->RegulatoryReports: Generate report
+Loans->AuditLogs: Log activity

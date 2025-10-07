@@ -1,0 +1,5 @@
+title Property & Escrow Flow
+
+Loans->PropertyDetails: Link property
+Loans->EscrowAccounts: Create escrow
+EscrowAccounts->EscrowTransactions: Record transaction

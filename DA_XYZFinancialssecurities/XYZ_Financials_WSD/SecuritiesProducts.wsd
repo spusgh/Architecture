@@ -1,0 +1,6 @@
+title Securities & Products Flow
+
+Loans->Securities: Link security
+Securities->FINRA_FI: Map to FINRA
+Applications->MortgageProducts: Select product
+MortgageProducts->ProductSubtype: Categorize product

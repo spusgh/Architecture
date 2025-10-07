@@ -1,0 +1,24 @@
+title Full Schema Interaction
+
+Customer->Customers: Provide info
+Customers->CustomerAddresses: Add address
+Customer->Applications: Submit application
+Applications->LoanOfficers: Assigned officer
+Applications->MortgageProducts: Select product
+Applications->DocumentsRegistry: Upload documents
+Applications->RiskAssessments: Evaluate risk
+Applications->Loans: Create loan
+Loans->Payments: Schedule payments
+Loans->LoanTermModifications: Apply term change
+Loans->ServicingRights: Assign servicer
+Loans->PropertyDetails: Link property
+Loans->EscrowAccounts: Create escrow
+EscrowAccounts->EscrowTransactions: Record transaction
+Loans->Securities: Link security
+Securities->FINRA_FI: Map to FINRA
+MortgageProducts->ProductSubtype: Categorize product
+Loans->DefaultsForeclosures: Track default
+CapitalMarketData->Loans: Inform pricing
+AuditLog->Applications: Log changes
+AuditLog->Loans: Log changes
+AuditLog->Customers: Log changes

@@ -1,0 +1,7 @@
+title Customer & Application Flow
+
+Customer->Customers: Provide personal info
+Customers->CustomerAddresses: Add address
+Customer->Applications: Submit application
+Applications->LoanOfficers: Assigned officer
+Applications->MortgageProducts: Select product

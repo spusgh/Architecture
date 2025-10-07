@@ -1,0 +1,4 @@
+title Investor & Servicing Flow
+Loans->Investors: Assign investor
+Loans->ServicingRights: Manage servicing
+ServicingRights->Payments: Process payment

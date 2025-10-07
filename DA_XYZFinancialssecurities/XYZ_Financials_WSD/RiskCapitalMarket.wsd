@@ -1,0 +1,5 @@
+title Risk & Capital Markets Flow
+
+Applications->RiskAssessments: Evaluate risk
+Loans->DefaultsForeclosures: Track default
+CapitalMarketData->Loans: Inform pricing

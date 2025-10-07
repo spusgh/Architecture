@@ -1,0 +1,6 @@
+title Loan & Payment Flow
+
+Applications->Loans: Create loan
+Loans->Payments: Schedule payments
+Loans->LoanTermModifications: Apply term change
+Loans->ServicingRights: Assign servicer
